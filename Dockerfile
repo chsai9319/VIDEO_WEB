@@ -31,7 +31,7 @@ COPY --from=deps /usr/local/bin/gunicorn /usr/local/bin/gunicorn
 # Copy application source
 COPY --chown=appuser:appgroup app.py .
 COPY --chown=appuser:appgroup templates/ templates/
-COPY --chown=appuser:appgroup static/ static/
+#COPY --chown=appuser:appgroup static/ static/
 
 # Create uploads directory and set permissions
 RUN mkdir -p /app/uploads && \
